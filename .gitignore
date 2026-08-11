@@ -1,0 +1,23 @@
+node_modules/
+.env
+.env.local
+
+# Next.js
+.next/
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Local PGlite database — recreate with `npm run seed`
+.data/
+
+# Raw third-party payloads — scraped source data is NOT committed.
+# Regenerate with `npm run fetch`.
+data/raw/
+
+# Generated catalog is committed on purpose (see docs/INGESTION.md) — it is
+# our own normalized data, not El Hashim's content.
+# data/catalog/
+
+*.log
+.jarpath
+.DS_Store

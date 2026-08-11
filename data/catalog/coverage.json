@@ -1,0 +1,97 @@
+{
+  "by_category": {
+    "smartphones": {
+      "count": 184,
+      "fields": {
+        "storage_gb": 99,
+        "ram_gb": 95,
+        "screen_in": 0,
+        "display_type": 0,
+        "refresh_hz": 0,
+        "battery_mah": 0,
+        "charging_w": 0,
+        "chipset": 0,
+        "rear_camera_mp": 0,
+        "front_camera_mp": 0,
+        "has_5g": 43,
+        "dual_sim": 21,
+        "nfc": 0,
+        "os": 0,
+        "color": 20
+      }
+    },
+    "tablets": {
+      "count": 8,
+      "fields": {
+        "storage_gb": 100,
+        "ram_gb": 63,
+        "screen_in": 0,
+        "display_type": 0,
+        "refresh_hz": 0,
+        "battery_mah": 0,
+        "chipset": 0,
+        "has_cellular": 0,
+        "stylus_support": 0,
+        "os": 0,
+        "color": 0
+      }
+    },
+    "earbuds": {
+      "count": 39,
+      "fields": {
+        "form_factor": 0,
+        "anc": 0,
+        "playback_h": 0,
+        "case_total_h": 0,
+        "driver_mm": 0,
+        "bluetooth_version": 0,
+        "water_resistance": 0,
+        "wireless_charging": 0,
+        "mic_count": 0,
+        "color": 0
+      }
+    },
+    "smartwatches": {
+      "count": 13,
+      "fields": {
+        "screen_in": 0,
+        "display_type": 0,
+        "case_mm": 0,
+        "battery_days": 0,
+        "water_resistance": 0,
+        "gps": 0,
+        "bluetooth_calling": 0,
+        "heart_rate": 0,
+        "spo2": 0,
+        "strap_material": 0,
+        "color": 0
+      }
+    },
+    "powerbanks": {
+      "count": 5,
+      "fields": {
+        "capacity_mah": 100,
+        "output_w": 0,
+        "input_w": 0,
+        "port_count": 0,
+        "usb_c_pd": 0,
+        "wireless_output": 0,
+        "built_in_cable": 0,
+        "weight_g": 0,
+        "color": 0
+      }
+    },
+    "gaming": {
+      "count": 5,
+      "fields": {
+        "device_type": 0,
+        "connectivity": 0,
+        "dpi": 0,
+        "button_count": 0,
+        "rgb": 0,
+        "weight_g": 0,
+        "color": 0
+      }
+    }
+  }
+}

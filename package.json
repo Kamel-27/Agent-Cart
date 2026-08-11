@@ -1,0 +1,39 @@
+{
+  "name": "agent-cart",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "fetch": "tsx scripts/fetch.ts",
+    "build:catalog": "tsx scripts/build-catalog.ts",
+    "ingest": "npm run fetch && npm run build:catalog",
+    "typecheck": "tsc --noEmit",
+    "seed": "tsx scripts/seed.ts",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.4",
+    "next": "^16.3.0",
+    "pg": "^8.23.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "stripe": "^22.5.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.21.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^0.116.0",
+    "@google/genai": "^2.16.0"
+  }
+}
