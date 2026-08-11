@@ -3,65 +3,101 @@ import { listCategories } from "@/lib/catalog";
 import { getCartCount } from "@/lib/cart";
 import { t, type Locale } from "@/lib/i18n";
 
-/**
- * Server component. The search box and the language switch are plain forms, so
- * navigation and locale switching work with JavaScript disabled and there is no
- * client bundle for the header at all.
- */
 export async function SiteHeader({ locale }: { locale: Locale }) {
   const [categories, cartCount] = await Promise.all([listCategories(), getCartCount()]);
+  const isAr = locale === "ar";
 
   return (
-    <header className="site-header">
-      <div className="container">
-        <div className="header-row">
-          <Link href="/" className="brand">
-            {t(locale, "site.name")}
-            <small>{t(locale, "site.tagline")}</small>
-          </Link>
+    <>
+      {/* Top Announcement Ticker */}
+      <div className="top-bar">
+        <div className="container top-bar-content">
+          <div>
+            {isAr
+              ? "⚡ توصيل سريع لجميع المحافظات | ضمان رسمي 100%"
+              : "⚡ Fast Express Shipping Across Egypt | 100% Official Warranty"}
+          </div>
+          <div style={{ display: "flex", gap: "16px" }}>
+            <span>{isAr ? "خدمة العملاء: 19000" : "Support: 19000"}</span>
+          </div>
+        </div>
+      </div>
 
-          <form className="search-form" action="/search" method="get" role="search">
-            <input
-              type="search"
-              name="q"
-              placeholder={t(locale, "nav.search")}
-              aria-label={t(locale, "nav.search")}
-            />
-            <button className="btn" type="submit">
-              {locale === "ar" ? "بحث" : "Search"}
-            </button>
-          </form>
+      {/* Main Sticky Header */}
+      <header className="site-header">
+        <div className="container">
+          <div className="header-row">
+            {/* Brand Logo */}
+            <Link href="/" className="brand-logo">
+              <span>{isAr ? "دبي فون" : "Dubai Phone"}</span>
+              <span className="badge-tag">{isAr ? "ذكائي" : "AI STORE"}</span>
+            </Link>
 
-          <nav className="nav-links">
-            <form action="/api/locale" method="post">
-              <input type="hidden" name="locale" value={locale === "ar" ? "en" : "ar"} />
-              <button className="btn-link" type="submit">
-                {locale === "ar" ? "English" : "العربية"}
+            {/* Search Form */}
+            <form className="search-form" action="/search" method="get" role="search">
+              <input
+                type="search"
+                name="q"
+                placeholder={isAr ? "ابحث عن هاتف، ماركة (سامسونج، آيفون، شاومي)..." : "Search phones, brands (Samsung, iPhone, Xiaomi)..."}
+                aria-label={t(locale, "nav.search")}
+              />
+              <button type="submit">
+                {isAr ? "بحث" : "Search"}
               </button>
             </form>
 
-            <Link href="/compare" className="btn-link">
-              {locale === "ar" ? "المقارنة" : "Compare"}
-            </Link>
+            {/* Navigation Actions */}
+            <div className="nav-actions">
+              {/* Language Toggle */}
+              <form action="/api/locale" method="post">
+                <input type="hidden" name="locale" value={isAr ? "en" : "ar"} />
+                <button className="nav-btn" type="submit">
+                  🌐 {isAr ? "English" : "العربية"}
+                </button>
+              </form>
 
-            <Link href="/cart" className="cart-pill">
-              {t(locale, "nav.cart")}
-              {cartCount > 0 && <span className="count">{cartCount}</span>}
+              {/* Compare Page */}
+              <Link href="/compare" className="nav-btn">
+                ⚖️ {isAr ? "المقارنة" : "Compare"}
+              </Link>
+
+              {/* Cart Button */}
+              <Link href="/cart" className="cart-btn">
+                🛒 {t(locale, "nav.cart")}
+                {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+              </Link>
+            </div>
+          </div>
+
+          {/* Smartphone Category & Brand Navigation */}
+          <nav className="category-nav">
+            <Link href="/c/smartphones" className="category-pill active">
+              📱 {isAr ? "جميع الهواتف" : "All Smartphones"}
+            </Link>
+            <Link href="/c/smartphones?brand=Samsung" className="category-pill">
+              Samsung
+            </Link>
+            <Link href="/c/smartphones?brand=Apple" className="category-pill">
+              Apple
+            </Link>
+            <Link href="/c/smartphones?brand=Xiaomi" className="category-pill">
+              Xiaomi
+            </Link>
+            <Link href="/c/smartphones?brand=Realme" className="category-pill">
+              Realme
+            </Link>
+            <Link href="/c/smartphones?brand=Infinix" className="category-pill">
+              Infinix
+            </Link>
+            <Link href="/c/smartphones?brand=Vivo" className="category-pill">
+              Vivo
+            </Link>
+            <Link href="/c/smartphones?brand=Oppo" className="category-pill">
+              OPPO
             </Link>
           </nav>
         </div>
-
-        <nav className="category-bar">
-          <Link href="/c">{t(locale, "nav.allProducts")}</Link>
-          {categories.map((category) => (
-            <Link key={category.slug} href={`/c/${category.slug}`}>
-              {locale === "ar" ? category.name_ar : category.name_en}
-              {" "}
-              <span style={{ opacity: 0.55 }}>({category.product_count})</span>
-            </Link>
-          ))}
-        </nav>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }

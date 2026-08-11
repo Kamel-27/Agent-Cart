@@ -6,7 +6,6 @@
 
 import { cookies } from "next/headers";
 import {
-  CART_COOKIE as SERVICE_CART_COOKIE,
   isValidUuid,
   createCartRecord,
   getCartById,
@@ -20,7 +19,7 @@ import {
 } from "@/services/cart.service";
 
 export type { CartLine, Cart };
-export const CART_COOKIE = SERVICE_CART_COOKIE || "cart_id";
+export const CART_COOKIE = "cart_id";
 
 /** Read-only cookie lookup. */
 export async function readCartId(): Promise<string | null> {

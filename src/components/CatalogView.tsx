@@ -184,7 +184,7 @@ export async function CatalogView({ locale, basePath, searchParams, categorySlug
         {result.products.length === 0 ? (
           <p className="empty-state">{t(locale, "search.noResults")}</p>
         ) : (
-          <div className="product-grid">
+          <div className="phone-grid">
             {result.products.map((product) => (
               <ProductCard key={product.id} product={product} locale={locale} />
             ))}
