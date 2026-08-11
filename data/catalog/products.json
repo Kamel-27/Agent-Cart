@@ -40,7 +40,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 8943,
         "source_url": "https://elhashimstore.com/product/realme-15-dual-sim-256gb-12gb-ram-5g-titanium/",
@@ -95,7 +97,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 8932,
         "source_url": "https://elhashimstore.com/product/vivo-y500-8gb-ram-256gb-blue/",
@@ -148,7 +152,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 8844,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a17-6gb-ram-128gb-black/",
@@ -202,7 +208,9 @@
         "RAM 6 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 8826,
         "source_url": "https://elhashimstore.com/product/infinix-hot-70-dual-sim-128gb-6gb-ram4g-2/",
@@ -257,7 +265,9 @@
         "RAM 6 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 8824,
         "source_url": "https://elhashimstore.com/product/infinix-hot-70-dual-sim-128gb-6gb-ram4g/",
@@ -312,7 +322,9 @@
         "RAM 4 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 8815,
         "source_url": "https://elhashimstore.com/product/infinix-hot-70-dual-sim-128gb-4gb-ram4g-2/",
@@ -367,7 +379,9 @@
         "RAM 4 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 8806,
         "source_url": "https://elhashimstore.com/product/infinix-hot-70-dual-sim-128gb-4gb-ram4g/",
@@ -421,7 +435,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 8771,
         "source_url": "https://elhashimstore.com/product/infinix-note-60-8gb-256gb-blue/",
@@ -474,7 +490,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 8762,
         "source_url": "https://elhashimstore.com/product/infinix-note-60-8gb-256gb-black/",
@@ -608,7 +626,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 8677,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a17-dual-sim-5g-256gb-8gb-ram-black/",
@@ -664,7 +684,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7906,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a27-dual-sim-128gb-8gb-ram-5g/",
@@ -720,7 +742,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7873,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a27-dual-sim-256gb-8gb-ram-5g-2/",
@@ -776,7 +800,9 @@
         "RAM 4 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7645,
         "source_url": "https://elhashimstore.com/product/apple-iphone-13-128gb-4gb-ram-5g-single-sim-tax/",
@@ -831,7 +857,9 @@
         "RAM 4 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7647,
         "source_url": "https://elhashimstore.com/product/apple-iphone-13-128gb-4gb-ram-5g-single-sim-midnight-tax/",
@@ -886,7 +914,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7637,
         "source_url": "https://elhashimstore.com/product/realme-15-dual-sim-256gb-12gb-ram-5g-pink/",
@@ -941,7 +971,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7631,
         "source_url": "https://elhashimstore.com/product/realme-16-dual-sim-256gb-8gb-ram5g-whaite/",
@@ -996,7 +1028,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7623,
         "source_url": "https://elhashimstore.com/product/realme-16-dual-sim-256gb-8gb-ram5g-black/",
@@ -1050,7 +1084,9 @@
         "storage 64 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7618,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a07-4gb-ram-64-gb-black/",
@@ -1103,7 +1139,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7608,
         "source_url": "https://elhashimstore.com/product/realme-c85-pro-8gb-ram-256gb-purple/",
@@ -1155,7 +1193,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7601,
         "source_url": "https://elhashimstore.com/product/realme-c85-pro-8gb-ram-256gb-green/",
@@ -1207,7 +1247,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7595,
         "source_url": "https://elhashimstore.com/product/honor-600-lite-8-gb-ram-256gb-ashen/",
@@ -1259,7 +1301,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7589,
         "source_url": "https://elhashimstore.com/product/honor-600-lite-8-gb-ram-256gb-gold/",
@@ -1311,7 +1355,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7579,
         "source_url": "https://elhashimstore.com/product/honor-600-lite-8-gb-ram-256gb-velvet-black/",
@@ -1363,7 +1409,9 @@
         "storage 256 GB",
         "RAM 12 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7562,
         "source_url": "https://elhashimstore.com/product/realme-16-pro-12gb-ram-256gb-gery/",
@@ -1415,7 +1463,9 @@
         "storage 256 GB",
         "RAM 12 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7555,
         "source_url": "https://elhashimstore.com/product/realme-16-pro-12gb-ram-256gb-gold/",
@@ -1467,7 +1517,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7549,
         "source_url": "https://elhashimstore.com/product/realme-c75-8gb-ram-256gb-storm-black/",
@@ -1519,7 +1571,9 @@
         "storage 256 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7543,
         "source_url": "https://elhashimstore.com/product/realme-c71-4gb-ram-256-gb-green/",
@@ -1571,7 +1625,9 @@
         "storage 256 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7541,
         "source_url": "https://elhashimstore.com/product/realme-c71-4gb-ram-256-gb-white/",
@@ -1624,7 +1680,9 @@
         "RAM 4 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7537,
         "source_url": "https://elhashimstore.com/product/infinix-smart-20-dual-sim-64gb-4gb-ram4g-4/",
@@ -1679,7 +1737,9 @@
         "RAM 4 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7534,
         "source_url": "https://elhashimstore.com/product/infinix-smart-20-dual-sim-128-gb-4gb-ram4g/",
@@ -1734,7 +1794,9 @@
         "RAM 4 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7532,
         "source_url": "https://elhashimstore.com/product/infinix-smart-20-dual-sim-128gb-4gb-ram4g/",
@@ -1789,7 +1851,9 @@
         "RAM 4 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7523,
         "source_url": "https://elhashimstore.com/product/infinix-smart-20-dual-sim-64gb-4gb-ram4g-3/",
@@ -1844,7 +1908,9 @@
         "RAM 4 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7513,
         "source_url": "https://elhashimstore.com/product/infinix-smart-20-dual-sim-64gb-4gb-ram4g-2/",
@@ -1899,7 +1965,9 @@
         "RAM 4 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7504,
         "source_url": "https://elhashimstore.com/product/infinix-smart-20-dual-sim-64gb-4gb-ram4g/",
@@ -1954,7 +2022,9 @@
         "finish Black",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7487,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-a7-pro-dual-sim-128-4gb-ram-black/",
@@ -2008,7 +2078,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7476,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-s26-ultra-dual-sim-512gb-12gb-ram-5g-black/",
@@ -2365,7 +2437,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/oppo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7407,
         "source_url": "https://elhashimstore.com/product/oppo-a6-pro-4g-8gb-ram-256gb-red/",
@@ -3108,7 +3182,9 @@
         "RAM 12 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7206,
         "source_url": "https://elhashimstore.com/product/honor-600-pro-dual-sim-512gb-12gb-ram-black/",
@@ -3162,7 +3238,9 @@
         "RAM 12 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7196,
         "source_url": "https://elhashimstore.com/product/honor-600-pro-dual-sim-512gb-12gb-ram-orange/",
@@ -3216,7 +3294,9 @@
         "RAM 12 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7187,
         "source_url": "https://elhashimstore.com/product/honor-600-pro-dual-sim-512gb-12gb-ram-golden-white/",
@@ -3270,7 +3350,9 @@
         "RAM 12 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7185,
         "source_url": "https://elhashimstore.com/product/honor-600-dual-sim-256gb-12gb-ram-golden-white/",
@@ -3324,7 +3406,9 @@
         "RAM 12 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7183,
         "source_url": "https://elhashimstore.com/product/honor-600-dual-sim-256gb-12gb-ram-black/",
@@ -3378,7 +3462,9 @@
         "RAM 12 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7181,
         "source_url": "https://elhashimstore.com/product/honor-600-dual-sim-256gb-12gb-ram-orange/",
@@ -3432,7 +3518,9 @@
         "RAM 8 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7170,
         "source_url": "https://elhashimstore.com/product/honor-600-dual-sim-256gb-8gb-ram-black/",
@@ -3486,7 +3574,9 @@
         "RAM 8 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7160,
         "source_url": "https://elhashimstore.com/product/honor-600-dual-sim-256gb-8gb-ram-orange/",
@@ -3540,7 +3630,9 @@
         "RAM 8 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7150,
         "source_url": "https://elhashimstore.com/product/honor-600-dual-sim-256gb-8gb-ram-golden-white/",
@@ -3593,7 +3685,9 @@
         "storage 256 GB",
         "RAM 12 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7145,
         "source_url": "https://elhashimstore.com/product/infinix-note-60-pro-12gb-ram-256gb-orange-2/",
@@ -3645,7 +3739,9 @@
         "storage 256 GB",
         "RAM 12 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7140,
         "source_url": "https://elhashimstore.com/product/infinix-note-60-pro-12gb-ram-256gb-orange/",
@@ -3698,7 +3794,9 @@
         "RAM 8 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7133,
         "source_url": "https://elhashimstore.com/product/infinix-note-edge-dual-sim-8gb-ram-256gb-green/",
@@ -3752,7 +3850,9 @@
         "RAM 8 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7126,
         "source_url": "https://elhashimstore.com/product/infinix-note-edge-dual-sim-8gb-ram-256gb-blue/",
@@ -3806,7 +3906,9 @@
         "RAM 8 GB",
         "dual SIM"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7118,
         "source_url": "https://elhashimstore.com/product/infinix-note-edge-dual-sim-8gb-ram-256gb-black/",
@@ -3860,7 +3962,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/oppo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7101,
         "source_url": "https://elhashimstore.com/product/oppo-reno-15-5g-12gb-ram-512gb-blue/",
@@ -3915,7 +4019,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/oppo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7095,
         "source_url": "https://elhashimstore.com/product/oppo-reno-15f-5g-8-gb-ram-256gb-light-blue/",
@@ -4228,7 +4334,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 7004,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a37-dual-sim-256gb-8gb-ram-5g-white/",
@@ -4284,7 +4392,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6988,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a37-dual-sim-256gb-12gb-ram-5g-charcoal/",
@@ -4340,7 +4450,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6961,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a57-dual-sim-256gb-8gb-ram-5g-awesome-navy/",
@@ -4396,7 +4508,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6918,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a57-dual-sim-256gb-12gb-ram-5g-gray/",
@@ -4452,7 +4566,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6818,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-s26-ultra-dual-sim-256gb-12gb-ram-5g-white/",
@@ -4722,7 +4838,9 @@
       "highlights_en": [
         "storage 256 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6530,
         "source_url": "https://elhashimstore.com/product/apple-iphone-17-pro-max-256gb-deep-blue-2-years-warranty/",
@@ -4772,7 +4890,9 @@
       "highlights_en": [
         "storage 256 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6526,
         "source_url": "https://elhashimstore.com/product/apple-iphone-17-pro-256gb-silver-2-year-warranty-3/",
@@ -4822,7 +4942,9 @@
       "highlights_en": [
         "storage 256 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6524,
         "source_url": "https://elhashimstore.com/product/apple-iphone-17-pro-max-256gb-orange-2-year-warranty/",
@@ -5137,7 +5259,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6457,
         "source_url": "https://elhashimstore.com/product/realme-15-pro-5g-12gb-ram-256gb/",
@@ -5191,7 +5315,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6425,
         "source_url": "https://elhashimstore.com/product/realme-15-pro-5g-12gb-ram-256gb-green/",
@@ -5464,7 +5590,9 @@
         "storage 256 GB",
         "RAM 12 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6308,
         "source_url": "https://elhashimstore.com/product/vivo-v70-fe-256gb-12gb-ram-blue/",
@@ -5516,7 +5644,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6303,
         "source_url": "https://elhashimstore.com/product/vivo-v70-fe-256gb-8gb-ram-blue/",
@@ -5568,7 +5698,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6301,
         "source_url": "https://elhashimstore.com/product/vivo-v70-fe-256gb-8gb-ram-silver/",
@@ -5620,7 +5752,9 @@
         "storage 256 GB",
         "RAM 12 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6297,
         "source_url": "https://elhashimstore.com/product/vivo-v70-fe-256gb-12gb-ram-silver/",
@@ -5930,7 +6064,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6013,
         "source_url": "https://elhashimstore.com/product/realme-c75x-8gb-ram-256gb-blue/",
@@ -5982,7 +6118,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 6009,
         "source_url": "https://elhashimstore.com/product/realme-c75x-8gb-ram-256gb-pink/",
@@ -6034,7 +6172,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5999,
         "source_url": "https://elhashimstore.com/product/realme-c75x-6gb-ram-128gb-pink/",
@@ -6086,7 +6226,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5989,
         "source_url": "https://elhashimstore.com/product/realme-c75x-6gb-ram-128gb-blue/",
@@ -6138,7 +6280,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5981,
         "source_url": "https://elhashimstore.com/product/realme-c71-4gb-ram-128gb-white/",
@@ -6190,7 +6334,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5971,
         "source_url": "https://elhashimstore.com/product/realme-c71-4gb-ram-128gb-green/",
@@ -6242,7 +6388,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5960,
         "source_url": "https://elhashimstore.com/product/realme-note-70-4gb-ram-128gb-black-2/",
@@ -6294,7 +6442,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5949,
         "source_url": "https://elhashimstore.com/product/realme-note-70-4gb-ram-128gb-black/",
@@ -6346,7 +6496,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5947,
         "source_url": "https://elhashimstore.com/product/realme-note-60x-4gb-ram-128gb-green/",
@@ -6398,7 +6550,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5942,
         "source_url": "https://elhashimstore.com/product/realme-note-60x-4gb-ram-128gb-black/",
@@ -6450,7 +6604,9 @@
         "storage 64 GB",
         "RAM 3 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5936,
         "source_url": "https://elhashimstore.com/product/realme-note-60x-3gb-ram-64gb-black-2/",
@@ -6502,7 +6658,9 @@
         "storage 64 GB",
         "RAM 3 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5930,
         "source_url": "https://elhashimstore.com/product/realme-note-60x-3gb-ram-64gb-black/",
@@ -6555,7 +6713,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5924,
         "source_url": "https://elhashimstore.com/product/realme-15t-4g-12gb-ram-256gb-black/",
@@ -6609,7 +6769,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/realme-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5916,
         "source_url": "https://elhashimstore.com/product/realme-15t-4g-8gb-ram-256gb-silver/",
@@ -7423,7 +7585,9 @@
       "highlights_en": [
         "storage 256 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5699,
         "source_url": "https://elhashimstore.com/product/apple-iphone-17-256gb-blue/",
@@ -7473,7 +7637,9 @@
       "highlights_en": [
         "storage 256 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5697,
         "source_url": "https://elhashimstore.com/product/apple-iphone-17-256gb-white/",
@@ -7525,7 +7691,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5633,
         "source_url": "https://elhashimstore.com/product/honor-x9d-5g-12gb-ram-256gb-brown/",
@@ -7579,7 +7747,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5622,
         "source_url": "https://elhashimstore.com/product/honor-x9d-5g-12gb-ram-256gb-green/",
@@ -7633,7 +7803,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5615,
         "source_url": "https://elhashimstore.com/product/honor-x9d-5g-12gb-ram-256gb-black/",
@@ -7687,7 +7859,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5595,
         "source_url": "https://elhashimstore.com/product/honor-x7d-5g-8gb-ram-256gb-silver/",
@@ -7741,7 +7915,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5587,
         "source_url": "https://elhashimstore.com/product/honor-x7d-5g-8gb-ram-256gb-black/",
@@ -7794,7 +7970,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5580,
         "source_url": "https://elhashimstore.com/product/honor-x7d-8gb-ram-256gb-gold/",
@@ -7846,7 +8024,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5572,
         "source_url": "https://elhashimstore.com/product/honor-x7d-8gb-ram-256gb-silver/",
@@ -7898,7 +8078,9 @@
         "storage 256 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5564,
         "source_url": "https://elhashimstore.com/product/honor-x6c-6gb-ram-256gb-blue/",
@@ -7950,7 +8132,9 @@
         "storage 256 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5556,
         "source_url": "https://elhashimstore.com/product/honor-x6c-6gb-ram-256gb-black/",
@@ -8002,7 +8186,9 @@
         "storage 256 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5553,
         "source_url": "https://elhashimstore.com/product/honor-x6c-6gb-ram-256gb-white/",
@@ -8054,7 +8240,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/honor-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5546,
         "source_url": "https://elhashimstore.com/product/honor-x6c-6gb-ram-128gb-white/",
@@ -8106,7 +8294,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5455,
         "source_url": "https://elhashimstore.com/product/vivo-y31d-4g-8gb-ram-256gb-gold/",
@@ -8159,7 +8349,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5452,
         "source_url": "https://elhashimstore.com/product/vivo-y31d-4g-8gb-ram-256gb-gray/",
@@ -8212,7 +8404,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5443,
         "source_url": "https://elhashimstore.com/product/vivo-y31d-4g-6gb-ram-128gb-gold/",
@@ -8265,7 +8459,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5437,
         "source_url": "https://elhashimstore.com/product/vivo-y31d-4g-6gb-ram-128gb-gray/",
@@ -8318,7 +8514,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5431,
         "source_url": "https://elhashimstore.com/product/vivo-y21d-6gb-ram-128gb-green/",
@@ -8370,7 +8568,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5429,
         "source_url": "https://elhashimstore.com/product/vivo-y21d-6gb-ram-128gb-red/",
@@ -8422,7 +8622,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5404,
         "source_url": "https://elhashimstore.com/product/vivo-y05-4g-4gb-ram-128gb-blue-2/",
@@ -8475,7 +8677,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5402,
         "source_url": "https://elhashimstore.com/product/vivo-y05-4g-4gb-ram-128gb-blue/",
@@ -8528,7 +8732,9 @@
         "storage 64 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5393,
         "source_url": "https://elhashimstore.com/product/vivo-y05-4g-4gb-ram-64gb-black/",
@@ -8581,7 +8787,9 @@
         "storage 64 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/vivo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5386,
         "source_url": "https://elhashimstore.com/product/vivo-y05-4g-4gb-ram-64gb-blue/",
@@ -8635,7 +8843,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5372,
         "source_url": "https://elhashimstore.com/product/infinix-gt-30-pro-5g-12gb-ram-512gb-black/",
@@ -8689,7 +8899,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5366,
         "source_url": "https://elhashimstore.com/product/infinix-note-50s-5g-8gb-ram-256gb-purple/",
@@ -8743,7 +8955,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5359,
         "source_url": "https://elhashimstore.com/product/infinix-note-50s-5g-8gb-ram-256gb-titanium-gray/",
@@ -8797,7 +9011,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5352,
         "source_url": "https://elhashimstore.com/product/infinix-note-50s-5g-8gb-ram-256gb-blue/",
@@ -8851,7 +9067,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5345,
         "source_url": "https://elhashimstore.com/product/infinix-note-50s-5g-8gb-ram-256gb-red/",
@@ -8904,7 +9122,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5338,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-pro-8gb-ram-256gb-silver-2/",
@@ -8956,7 +9176,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5333,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-pro-8gb-ram-256gb-pink-2/",
@@ -9008,7 +9230,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5325,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-pro-8gb-ram-256gb-black-2/",
@@ -9060,7 +9284,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5318,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-pro-8gb-ram-256gb-yellow/",
@@ -9112,7 +9338,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5311,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-pro-8gb-ram-256gb-blue/",
@@ -9164,7 +9392,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5304,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-pro-8gb-ram-256gb-pink/",
@@ -9216,7 +9446,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5297,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-pro-8gb-ram-256gb-silver/",
@@ -9268,7 +9500,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5290,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-pro-8gb-ram-256gb-black/",
@@ -9321,7 +9555,9 @@
         "RAM 6 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5283,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-5g-6gb-ram-128gb-caramel/",
@@ -9375,7 +9611,9 @@
         "RAM 6 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5276,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-5g-6gb-ram-128gb-blue/",
@@ -9429,7 +9667,9 @@
         "RAM 6 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5269,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60-5g-6gb-ram-128gb-green/",
@@ -9482,7 +9722,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5267,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60i-8gb-ram-256gb-red/",
@@ -9534,7 +9776,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5265,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60i-8gb-ram-256gb-blue/",
@@ -9586,7 +9830,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5263,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60i-8gb-ram-256gb-silver/",
@@ -9638,7 +9884,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5261,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60i-8gb-ram-256gb-black/",
@@ -9690,7 +9938,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5257,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60i-8gb-ram-256gb-green/",
@@ -9742,7 +9992,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5249,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60i-6gb-ram-128gb-green/",
@@ -9794,7 +10046,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5242,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60i-6gb-ram-128gb-blue/",
@@ -9846,7 +10100,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5235,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60i-6gb-ram-128gb-red/",
@@ -9898,7 +10154,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5228,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60i-6gb-ram-128gb-black/",
@@ -9950,7 +10208,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5221,
         "source_url": "https://elhashimstore.com/product/infinix-hot-60i-6gb-ram-128gb-silver/",
@@ -10002,7 +10262,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5219,
         "source_url": "https://elhashimstore.com/product/infinix-smart-10-4gb-ram-128gb-gold/",
@@ -10054,7 +10316,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5217,
         "source_url": "https://elhashimstore.com/product/infinix-smart-10-4gb-ram-128gb-blue/",
@@ -10106,7 +10370,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5215,
         "source_url": "https://elhashimstore.com/product/infinix-smart-10-4gb-ram-128gb-silver/",
@@ -10158,7 +10424,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5213,
         "source_url": "https://elhashimstore.com/product/infinix-smart-10-4gb-ram-128gb-black/",
@@ -10210,7 +10478,9 @@
         "storage 64 GB",
         "RAM 3 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5207,
         "source_url": "https://elhashimstore.com/product/infinix-smart-10-3gb-ram-64gb-gold/",
@@ -10262,7 +10532,9 @@
         "storage 64 GB",
         "RAM 3 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5202,
         "source_url": "https://elhashimstore.com/product/infinix-smart-10-3gb-ram-64gb-blue/",
@@ -10314,7 +10586,9 @@
         "storage 64 GB",
         "RAM 3 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5195,
         "source_url": "https://elhashimstore.com/product/infinix-smart-10-3gb-ram-64gb-silver/",
@@ -10366,7 +10640,9 @@
         "storage 64 GB",
         "RAM 3 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/infinix-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5189,
         "source_url": "https://elhashimstore.com/product/infinix-smart-10-3gb-ram-64gb-black/",
@@ -10419,7 +10695,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/oppo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5106,
         "source_url": "https://elhashimstore.com/product/oppo-reno-15-5g-12gb-ram-256gb-white/",
@@ -10474,7 +10752,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/oppo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5092,
         "source_url": "https://elhashimstore.com/product/oppo-reno-15f-5g-12gb-ram-256gb-blue/",
@@ -10529,7 +10809,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/oppo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5070,
         "source_url": "https://elhashimstore.com/product/oppo-a6-pro-5g-8gb-ram-256gb-blue/",
@@ -10583,7 +10865,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/oppo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5066,
         "source_url": "https://elhashimstore.com/product/oppo-a6-4g-8gb-ram-256gb-blue/",
@@ -10637,7 +10921,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/oppo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5061,
         "source_url": "https://elhashimstore.com/product/oppo-a6-4g-6gb-ram-128gb-gold/",
@@ -10691,7 +10977,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/oppo-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5054,
         "source_url": "https://elhashimstore.com/product/oppo-a6-4g-6gb-ram-128gb-blue/",
@@ -10746,7 +11034,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5007,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-pro-plus-5g-12gb-ram-512gb-blue-2/",
@@ -10800,7 +11090,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 5004,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-pro-plus-5g-12gb-ram-512gb-blue/",
@@ -10854,7 +11146,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4997,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-pro-plus-5g-12gb-ram-256gb-brown/",
@@ -10908,7 +11202,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4989,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-pro-plus-5g-12gb-ram-256gb-black/",
@@ -10962,7 +11258,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4980,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-pro-5g-12gb-ram-512gb-black/",
@@ -11016,7 +11314,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4971,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-pro-5g-12gb-ram-512gb-blue/",
@@ -11070,7 +11370,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4962,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-pro-5g-12gb-ram-512gb-titanium/",
@@ -11124,7 +11426,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4953,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-pro-5g-12gb-ram-256gb-black/",
@@ -11178,7 +11482,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4944,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-pro-5g-12gb-ram-256gb-blue/",
@@ -11232,7 +11538,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4935,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-pro-5g-12gb-ram-256gb-titanium/",
@@ -11286,7 +11594,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4933,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-5g-12gb-ram-512gb-purple/",
@@ -11340,7 +11650,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4930,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-5g-12gb-ram-512gb-black/",
@@ -11394,7 +11706,9 @@
         "RAM 12 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4928,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-5g-12gb-ram-512gb-blue/",
@@ -11448,7 +11762,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4926,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-5g-8gb-ram-256gb-purple/",
@@ -11502,7 +11818,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4923,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-5g-8gb-ram-256gb-black/",
@@ -11556,7 +11874,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4921,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-5g-8gb-ram-256gb-blue/",
@@ -11609,7 +11929,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4912,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-4g-8gb-ram-256gb-green/",
@@ -11662,7 +11984,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4903,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-4g-8gb-ram-256gb-blue/",
@@ -11715,7 +12039,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4887,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-note-15-4g-8gb-ram-256gb-black/",
@@ -11768,7 +12094,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4884,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-15-8gb-ram-256gb-black/",
@@ -11820,7 +12148,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4882,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-15-8gb-ram-256gb-gray/",
@@ -11872,7 +12202,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4873,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-15-6gb-ram-128gb-gray/",
@@ -11924,7 +12256,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4866,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-15-6gb-ram-128gb-purple/",
@@ -11976,7 +12310,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4858,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-15-6gb-ram-128gb-black/",
@@ -12028,7 +12364,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4803,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-15c-8gb-ram-256gb-blue/",
@@ -12081,7 +12419,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4775,
         "source_url": "https://elhashimstore.com/product/xiaomi-poco-c85-8gb-ram-256gb-black/",
@@ -12134,7 +12474,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/xiaomi-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4749,
         "source_url": "https://elhashimstore.com/product/xiaomi-redmi-15c-6gb-ram-128gb-black/",
@@ -12188,7 +12530,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4605,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a36-5g-8gb-ram-256gb-white/",
@@ -12243,7 +12587,9 @@
         "RAM 8 GB",
         "5G"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4586,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a36-5g-8gb-ram-128gb-black/",
@@ -12297,7 +12643,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4572,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a17-8gb-ram-256gb-black/",
@@ -12350,7 +12698,9 @@
         "storage 128 GB",
         "RAM 6 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4562,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a07-6gb-ram-128gb-black/",
@@ -12403,7 +12753,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4550,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a07-4gb-ram-128gb-black/",
@@ -12456,7 +12808,9 @@
         "storage 256 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4366,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a07-8gb-ram-256gb-black/",
@@ -12509,7 +12863,9 @@
         "storage 128 GB",
         "RAM 4 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/samsung-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4358,
         "source_url": "https://elhashimstore.com/product/samsung-galaxy-a17-4gb-ram-128gb-light-blue/",
@@ -12561,7 +12917,9 @@
       "highlights_en": [
         "storage 256 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4331,
         "source_url": "https://elhashimstore.com/product/apple-iphone-17-pro-256gb-silver-2-year-warranty/",
@@ -12611,7 +12969,9 @@
       "highlights_en": [
         "storage 256 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4288,
         "source_url": "https://elhashimstore.com/product/apple-iphone-17-256gb-green-2-year-warranty/",
@@ -12661,7 +13021,9 @@
       "highlights_en": [
         "storage 256 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4274,
         "source_url": "https://elhashimstore.com/product/apple-iphone-17-256gb-blue-2-year-warranty/",
@@ -12711,7 +13073,9 @@
       "highlights_en": [
         "storage 256 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4267,
         "source_url": "https://elhashimstore.com/product/apple-iphone-17-256gb-white-2-year-warranty/",
@@ -12762,7 +13126,9 @@
         "storage 128 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4214,
         "source_url": "https://elhashimstore.com/product/apple-iphone-16-128gb-white/",
@@ -12815,7 +13181,9 @@
         "storage 128 GB",
         "RAM 8 GB"
       ],
-      "images": [],
+      "images": [
+        "/images/products/apple-press-hero.svg"
+      ],
       "provenance": {
         "source_id": 4207,
         "source_url": "https://elhashimstore.com/product/apple-iphone-16-128gb-pink/",

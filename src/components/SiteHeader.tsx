@@ -40,6 +40,10 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
               </button>
             </form>
 
+            <Link href="/compare" className="btn-link">
+              {locale === "ar" ? "المقارنة" : "Compare"}
+            </Link>
+
             <Link href="/cart" className="cart-pill">
               {t(locale, "nav.cart")}
               {cartCount > 0 && <span className="count">{cartCount}</span>}

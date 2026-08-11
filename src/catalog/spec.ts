@@ -17,10 +17,10 @@
 import { z } from "zod";
 
 export type AttrSpec =
-  | { kind: "number"; desc: string; unit?: string; min?: number; max?: number; integer?: boolean }
-  | { kind: "enum"; desc: string; values: readonly string[] }
-  | { kind: "boolean"; desc: string }
-  | { kind: "string"; desc: string; maxLength?: number };
+  | { kind: "number"; desc: string; unit?: string; min?: number; max?: number; integer?: boolean; better?: "higher" | "lower" | "none" }
+  | { kind: "enum"; desc: string; values: readonly string[]; better?: "higher" | "lower" | "none" }
+  | { kind: "boolean"; desc: string; better?: "higher" | "lower" | "none" }
+  | { kind: "string"; desc: string; maxLength?: number; better?: "higher" | "lower" | "none" };
 
 export type AttrSpecMap = Record<string, AttrSpec>;
 

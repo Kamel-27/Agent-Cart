@@ -73,6 +73,24 @@ CREATE INDEX IF NOT EXISTS products_attrs_idx    ON products USING gin (attrs js
 CREATE INDEX IF NOT EXISTS products_category_idx ON products (category_id);
 CREATE INDEX IF NOT EXISTS products_price_idx    ON products (price_cents);
 CREATE INDEX IF NOT EXISTS products_brand_idx    ON products (brand);
+CREATE INDEX IF NOT EXISTS products_ram_idx      ON products (((attrs->>'ram_gb')::int));
+CREATE INDEX IF NOT EXISTS products_storage_idx  ON products (((attrs->>'storage_gb')::int));
+CREATE INDEX IF NOT EXISTS products_refresh_idx  ON products (((attrs->>'refresh_rate_hz')::int));
+
+CREATE TABLE IF NOT EXISTS product_variants (
+  id             serial PRIMARY KEY,
+  product_id     int NOT NULL REFERENCES products(id) ON DELETE CASCADE,
+  sku            text UNIQUE NOT NULL,
+  color          text,
+  storage_gb     int,
+  ram_gb         int,
+  price_cents    int NOT NULL,
+  stock          int NOT NULL DEFAULT 0,
+  image_url      text,
+  created_at     timestamptz NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS variants_product_idx ON product_variants (product_id);
 
 -- ---------------------------------------------------------------------------
 -- Cart

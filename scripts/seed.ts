@@ -93,6 +93,8 @@ async function main(): Promise<void> {
   // letting ON DELETE CASCADE silently empty a live cart.
   await query("BEGIN");
   await query("DELETE FROM cart_items");
+  await query("DELETE FROM order_items");
+  await query("DELETE FROM orders");
   await query("DELETE FROM products");
 
   let inserted = 0;
