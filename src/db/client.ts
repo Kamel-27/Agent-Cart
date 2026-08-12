@@ -66,10 +66,21 @@ async function createDriver(): Promise<Driver> {
 
   const { PGlite } = await import("@electric-sql/pglite");
   const dataDir = path.join(process.cwd(), ".data", "pg");
-  // PGlite creates its own data directory but not the parent chain.
   await mkdir(path.dirname(dataDir), { recursive: true });
-  const db = new PGlite(dataDir);
-  await db.waitReady;
+
+  let db: InstanceType<typeof PGlite>;
+  try {
+    db = new PGlite(dataDir);
+    await db.waitReady;
+  } catch (err) {
+    console.warn("PGlite database lock/corruption detected, re-initializing database directory...", err);
+    const { rm } = await import("node:fs/promises");
+    await rm(dataDir, { recursive: true, force: true });
+    await mkdir(path.dirname(dataDir), { recursive: true });
+    db = new PGlite(dataDir);
+    await db.waitReady;
+  }
+
   return {
     kind: "pglite",
     async query<T>(text: string, params: unknown[] = []) {
@@ -123,6 +134,12 @@ export function ensureSchema(): Promise<void> {
     schemaReady = (async () => {
       const driver = await getDriver();
       await driver.exec(DDL);
+      const check = await driver.query<{ n: string }>("SELECT count(*)::text AS n FROM products");
+      if (!check.rows[0] || parseInt(check.rows[0].n, 10) === 0) {
+        const { seedCatalog } = await import("@/lib/seed-catalog");
+        const catalogPath = path.join(process.cwd(), "data", "catalog", "products.json");
+        await seedCatalog(catalogPath);
+      }
     })().catch((err) => {
       schemaReady = undefined;
       throw err;
