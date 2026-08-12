@@ -83,7 +83,12 @@ async function createDriver(): Promise<Driver> {
 }
 
 function getDriver(): Promise<Driver> {
-  globalForDb.__agentCartDriver ??= createDriver();
+  if (!globalForDb.__agentCartDriver) {
+    globalForDb.__agentCartDriver = createDriver().catch((err) => {
+      delete globalForDb.__agentCartDriver;
+      throw err;
+    });
+  }
   return globalForDb.__agentCartDriver;
 }
 
@@ -114,9 +119,14 @@ let schemaReady: Promise<void> | undefined;
 
 /** Apply the DDL. Idempotent — every statement is CREATE ... IF NOT EXISTS. */
 export function ensureSchema(): Promise<void> {
-  schemaReady ??= (async () => {
-    const driver = await getDriver();
-    await driver.exec(DDL);
-  })();
+  if (!schemaReady) {
+    schemaReady = (async () => {
+      const driver = await getDriver();
+      await driver.exec(DDL);
+    })().catch((err) => {
+      schemaReady = undefined;
+      throw err;
+    });
+  }
   return schemaReady;
 }
