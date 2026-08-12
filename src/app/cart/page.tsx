@@ -25,6 +25,11 @@ export default async function CartPage() {
     );
   }
 
+  const summaryRows: Array<{ k: string; v: string; isTotal?: boolean }> = [
+    { k: t(locale, "cart.subtotal"), v: formatMoney(cart.subtotalCents, locale, cart.currency) },
+    { k: t(locale, "cart.total"), v: formatMoney(cart.subtotalCents, locale, cart.currency), isTotal: true },
+  ];
+
   return (
     <div className="container">
       <h1 className="page-title">{t(locale, "cart.title")}</h1>
@@ -34,13 +39,20 @@ export default async function CartPage() {
 
       {cart.lines.map((line) => (
         <div className="cart-line" key={line.product_id}>
-          <div className="cart-thumb">{line.images[0] ? "" : t(locale, "product.noImage")}</div>
+          <div className="cart-thumb">
+            {line.images[0] ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={line.images[0]} alt={line.title} />
+            ) : (
+              t(locale, "product.noImage")
+            )}
+          </div>
 
           <div>
-            <Link href={`/p/${line.slug}`} style={{ fontWeight: 600 }}>
+            <Link href={`/p/${line.slug}`} style={{ fontWeight: 600, color: "var(--ink)" }}>
               {line.title}
             </Link>
-            <div className="result-count">
+            <div className="result-count" style={{ marginBlockStart: 3 }}>
               {formatMoney(line.unit_price_cents, locale, line.currency)}
               {!line.in_stock && (
                 <span className="badge badge-out" style={{ marginInlineStart: 8 }}>
@@ -50,23 +62,27 @@ export default async function CartPage() {
             </div>
 
             <div className="cart-actions">
-              <form className="qty-form" action="/api/cart" method="post">
-                <input type="hidden" name="action" value="set" />
-                <input type="hidden" name="product_id" value={line.product_id} />
-                <input
-                  type="number"
-                  name="quantity"
-                  min={1}
-                  max={99}
-                  defaultValue={line.quantity}
-                  aria-label={t(locale, "cart.quantity")}
-                />
-                <button className="btn btn-secondary btn-sm" type="submit">
-                  {t(locale, "cart.update")}
-                </button>
-              </form>
+              <div className="qty-stepper">
+                <form action="/api/cart" method="post" style={{ margin: 0 }}>
+                  <input type="hidden" name="action" value="set" />
+                  <input type="hidden" name="product_id" value={line.product_id} />
+                  <input type="hidden" name="quantity" value={Math.max(1, line.quantity - 1)} />
+                  <button className="qty-btn" type="submit" aria-label={t(locale, "cart.decrease")}>
+                    −
+                  </button>
+                </form>
+                <span className="qty-value">{line.quantity}</span>
+                <form action="/api/cart" method="post" style={{ margin: 0 }}>
+                  <input type="hidden" name="action" value="set" />
+                  <input type="hidden" name="product_id" value={line.product_id} />
+                  <input type="hidden" name="quantity" value={Math.min(99, line.quantity + 1)} />
+                  <button className="qty-btn" type="submit" aria-label={t(locale, "cart.increase")}>
+                    +
+                  </button>
+                </form>
+              </div>
 
-              <form action="/api/cart" method="post">
+              <form action="/api/cart" method="post" style={{ margin: 0 }}>
                 <input type="hidden" name="action" value="remove" />
                 <input type="hidden" name="product_id" value={line.product_id} />
                 <button className="btn-link" type="submit">
@@ -76,23 +92,31 @@ export default async function CartPage() {
             </div>
           </div>
 
-          <div style={{ fontWeight: 700, whiteSpace: "nowrap" }}>
+          <div style={{ fontWeight: 700, whiteSpace: "nowrap", fontVariantNumeric: "tabular-nums" }}>
             {formatMoney(line.line_total_cents, locale, line.currency)}
           </div>
         </div>
       ))}
 
       <div className="cart-summary">
-        <div>
-          <div className="result-count">{t(locale, "cart.subtotal")}</div>
-          {/* Computed server-side from database prices on every render. */}
-          <div className="cart-total">{formatMoney(cart.subtotalCents, locale, cart.currency)}</div>
+        <div style={{ flex: 1, minWidth: 200 }}>
+          {summaryRows.map((row) => (
+            <div className={`summary-row${row.isTotal ? " is-total" : ""}`} key={row.k}>
+              <span style={{ color: "var(--text-muted)" }}>{row.k}</span>
+              <span style={{ fontVariantNumeric: "tabular-nums" }}>{row.v}</span>
+            </div>
+          ))}
         </div>
-        <form action="/api/checkout" method="post">
-          <button className="btn" type="submit">
-            {t(locale, "cart.checkout")}
-          </button>
-        </form>
+        <div>
+          <form action="/api/checkout" method="post">
+            <button className="btn" type="submit">
+              {t(locale, "cart.checkout")}
+            </button>
+          </form>
+          <div style={{ fontSize: 11, color: "var(--text-muted)", marginBlockStart: 10, textAlign: "center" }}>
+            {t(locale, "cart.securePay")}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
-import React from "react";
-import { getProductById } from "@/services/catalog.service";
+import Link from "next/link";
+import { getProductById } from "@/lib/catalog";
 import { getLocale } from "@/lib/locale";
 import { PhoneCompareMatrix } from "@/components/PhoneCompareMatrix";
-import Link from "next/link";
+import { t } from "@/lib/i18n";
 
 interface Props {
   searchParams: Promise<{ ids?: string }>;
@@ -10,39 +10,35 @@ interface Props {
 
 export default async function ComparePage({ searchParams }: Props) {
   const params = await searchParams;
-  const lang = await getLocale();
-  const isAr = lang === "ar";
+  const locale = await getLocale();
+  const isAr = locale === "ar";
 
   const rawIds = (params.ids || "")
     .split(",")
-    .map((s) => parseInt(s.trim(), 10))
+    .map((s) => Number.parseInt(s.trim(), 10))
     .filter((n) => Number.isFinite(n) && n > 0)
     .slice(0, 4);
 
-  const products = (
-    await Promise.all(rawIds.map((id) => getProductById(id)))
-  ).filter((p): p is NonNullable<typeof p> => p !== null);
+  const products = (await Promise.all(rawIds.map((id) => getProductById(id)))).filter(
+    (p): p is NonNullable<typeof p> => p !== null,
+  );
 
   return (
-    <div className="container" style={{ paddingBlock: "24px" }}>
-      <div style={{ marginBottom: "20px" }}>
-        <h1 className="page-title">
-          {isAr ? "مقارنة الهواتف الذكية" : "Smartphone Comparison"}
-        </h1>
-        <p className="page-sub">
-          {isAr
-            ? "مقارنة مواصفات الهواتف جنبًا إلى جنب مع حسم الفروقات تلقائيًا بناءً على البيانات الدقيقة."
-            : "Compare smartphone specifications side-by-side with automatic spec diff resolution."}
-        </p>
-      </div>
+    <div className="container" style={{ paddingBlock: 24 }}>
+      <h1 className="page-title">{isAr ? "مقارنة الهواتف الذكية" : "Smartphone comparison"}</h1>
+      <p className="page-sub">
+        {isAr
+          ? "قارن مواصفات الهواتف جنباً إلى جنب."
+          : "Compare smartphone specifications side by side."}
+      </p>
 
-      <PhoneCompareMatrix products={products} lang={lang} />
+      <PhoneCompareMatrix products={products} locale={locale} />
 
-      <div style={{ marginTop: "24px" }}>
+      <p style={{ marginBlockStart: 24 }}>
         <Link href="/c/smartphones" className="btn btn-secondary">
-          {isAr ? "← العودة إلى قائمة الهواتف" : "← Back to Smartphones"}
+          ← {t(locale, "nav.allProducts")}
         </Link>
-      </div>
+      </p>
     </div>
   );
 }

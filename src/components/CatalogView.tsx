@@ -72,6 +72,13 @@ export async function CatalogView({ locale, basePath, searchParams, categorySlug
   const result = await listProducts(filters);
   const selectedBrands = new Set(filters.brands ?? []);
 
+  const sortOptions: Array<{ key: SortKey; labelKey: string }> = [
+    { key: "relevance", labelKey: "sort.relevance" },
+    { key: "price_asc", labelKey: "sort.priceAsc" },
+    { key: "price_desc", labelKey: "sort.priceDesc" },
+    { key: "newest", labelKey: "sort.newest" },
+  ];
+
   return (
     <div className="layout-split">
       <aside>
@@ -89,8 +96,8 @@ export async function CatalogView({ locale, basePath, searchParams, categorySlug
           )}
 
           {result.brandFacets.length > 1 && (
-            <fieldset className="filter-group" style={{ border: 0, padding: 0, margin: "0 0 18px" }}>
-              <legend className="filter-legend">{t(locale, "filters.brand")}</legend>
+            <div className="filter-group">
+              <span className="filter-legend">{t(locale, "filters.brand")}</span>
               {result.brandFacets.slice(0, 12).map((facet) => (
                 <label key={facet.brand} className="checkbox-row">
                   <input
@@ -99,11 +106,11 @@ export async function CatalogView({ locale, basePath, searchParams, categorySlug
                     value={facet.brand}
                     defaultChecked={selectedBrands.has(facet.brand)}
                   />
-                  <span>{facet.brand}</span>
+                  <span style={{ flex: 1 }}>{facet.brand}</span>
                   <span className="facet-count">{facet.count}</span>
                 </label>
               ))}
-            </fieldset>
+            </div>
           )}
 
           <div className="filter-group">
@@ -128,7 +135,7 @@ export async function CatalogView({ locale, basePath, searchParams, categorySlug
               />
             </div>
             {result.priceBounds && (
-              <div style={{ fontSize: 12, color: "var(--text-dim)", marginBlockStart: 6 }}>
+              <div style={{ fontSize: 12, color: "var(--text-dim)", marginBlockStart: 8 }}>
                 {formatMoney(result.priceBounds.min, locale)} – {formatMoney(result.priceBounds.max, locale)}
               </div>
             )}
@@ -155,10 +162,10 @@ export async function CatalogView({ locale, basePath, searchParams, categorySlug
       <section>
         <div className="toolbar">
           <span className="result-count">
-            {result.total} {t(locale, "misc.results")}
+            <strong style={{ color: "var(--ink)", fontWeight: 700 }}>{result.total}</strong> {t(locale, "misc.results")}
           </span>
           <div className="spacer" />
-          <form method="get" action={basePath} style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          <form method="get" action={basePath} style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             {filters.q && <input type="hidden" name="q" value={filters.q} />}
             {[...selectedBrands].map((brand) => (
               <input key={brand} type="hidden" name="brand" value={brand} />
@@ -166,14 +173,12 @@ export async function CatalogView({ locale, basePath, searchParams, categorySlug
             {first(searchParams.min) && <input type="hidden" name="min" value={first(searchParams.min)} />}
             {first(searchParams.max) && <input type="hidden" name="max" value={first(searchParams.max)} />}
             {filters.inStockOnly && <input type="hidden" name="stock" value="1" />}
-            <label className="result-count" htmlFor="sort">
-              {t(locale, "filters.sort")}
-            </label>
-            <select id="sort" name="sort" defaultValue={filters.sort} style={{ inlineSize: "auto" }}>
-              <option value="relevance">{t(locale, "sort.relevance")}</option>
-              <option value="price_asc">{t(locale, "sort.priceAsc")}</option>
-              <option value="price_desc">{t(locale, "sort.priceDesc")}</option>
-              <option value="newest">{t(locale, "sort.newest")}</option>
+            <select id="sort" name="sort" defaultValue={filters.sort} aria-label={t(locale, "filters.sort")}>
+              {sortOptions.map((opt) => (
+                <option key={opt.key} value={opt.key}>
+                  {t(locale, opt.labelKey)}
+                </option>
+              ))}
             </select>
             <button className="btn btn-secondary btn-sm" type="submit">
               {t(locale, "filters.apply")}

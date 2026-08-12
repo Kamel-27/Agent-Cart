@@ -17,7 +17,6 @@ export default async function SearchPage({
       <h1 className="page-title">
         {t(locale, "search.resultsFor")} “{q}”
       </h1>
-      <p className="page-sub" />
       <CatalogView locale={locale} basePath="/search" searchParams={params} />
     </div>
   );

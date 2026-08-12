@@ -13,7 +13,6 @@ export default async function AllProductsPage({
   return (
     <div className="container">
       <h1 className="page-title">{t(locale, "nav.allProducts")}</h1>
-      <p className="page-sub" />
       <CatalogView locale={locale} basePath="/c" searchParams={params} />
     </div>
   );

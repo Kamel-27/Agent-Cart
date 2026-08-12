@@ -1,87 +1,93 @@
-import React from "react";
-import type { ProductRow } from "@/services/catalog.service";
+import type { ProductRow } from "@/lib/catalog";
+import { formatMoney } from "@/lib/money";
 import { generateProsCons } from "@/lib/pros-cons";
+import { t, type Locale } from "@/lib/i18n";
 
 interface Props {
   products: ProductRow[];
-  lang: "ar" | "en";
+  locale: Locale;
 }
 
-export function PhoneCompareMatrix({ products, lang }: Props) {
-  const isAr = lang === "ar";
+const SPEC_ROWS = [
+  { key: "chipset", labelEn: "Chipset", labelAr: "المعالج" },
+  { key: "display_type", labelEn: "Display panel", labelAr: "نوع الشاشة" },
+  { key: "screen_in", labelEn: "Screen size", labelAr: "حجم الشاشة", unit: '"' },
+  { key: "refresh_hz", labelEn: "Refresh rate", labelAr: "معدل التحديث", unit: "Hz" },
+  { key: "battery_mah", labelEn: "Battery", labelAr: "البطارية", unit: "mAh" },
+  { key: "charging_w", labelEn: "Fast charging", labelAr: "سرعة الشحن", unit: "W" },
+  { key: "rear_camera_mp", labelEn: "Main camera", labelAr: "الكاميرا الخلفية", unit: "MP" },
+  { key: "front_camera_mp", labelEn: "Front camera", labelAr: "كاميرا السيلفي", unit: "MP" },
+  { key: "has_5g", labelEn: "5G", labelAr: "دعم 5G" },
+] as const;
+
+export function PhoneCompareMatrix({ products, locale }: Props) {
+  const isAr = locale === "ar";
 
   if (products.length === 0) {
-    return (
-      <div className="empty-state">
-        <p>{isAr ? "لم يتم تحديد أي هواتف للمقارنة." : "No smartphones selected for comparison."}</p>
-      </div>
-    );
+    return <p className="empty-state">{isAr ? "لم يتم تحديد أي هواتف للمقارنة." : "No smartphones selected for comparison."}</p>;
   }
 
-  const keys = [
-    { key: "price_cents", labelEn: "Price", labelAr: "السعر", isPrice: true, better: "lower" },
-    { key: "chipset", labelEn: "Processor / Chipset", labelAr: "المعالج", better: "none" },
-    { key: "display_type", labelEn: "Display Panel", labelAr: "نوع الشاشة", better: "none" },
-    { key: "refresh_hz", labelEn: "Refresh Rate", labelAr: "معدل التحديث", unit: "Hz", better: "higher" },
-    { key: "battery_mah", labelEn: "Battery Capacity", labelAr: "سعة البطارية", unit: "mAh", better: "higher" },
-    { key: "charging_w", labelEn: "Fast Charging", labelAr: "سرعة الشحن", unit: "W", better: "higher" },
-    { key: "rear_camera_mp", labelEn: "Main Camera", labelAr: "الكاميرا الخلفية", unit: "MP", better: "higher" },
-    { key: "front_camera_mp", labelEn: "Selfie Camera", labelAr: "كاميرا السيلفي", unit: "MP", better: "higher" },
-    { key: "has_5g", labelEn: "5G Support", labelAr: "دعم الـ 5G", better: "higher" },
-  ];
-
   return (
-    <div style={{ overflowX: "auto" }}>
-      <table className="spec-table" style={{ border: "1px solid var(--border)", borderRadius: "var(--radius-lg)" }}>
+    <div className="compare-wrap">
+      <table className="compare-table">
         <thead>
           <tr>
-            <th style={{ padding: "12px", background: "var(--surface-2)" }}>
-              {isAr ? "المواصفة" : "Specification"}
-            </th>
-            {products.map((p) => (
-              <th key={p.id} style={{ padding: "12px", textAlign: "center", background: "var(--surface-2)", minWidth: "180px" }}>
-                <div style={{ fontWeight: 700, fontSize: "15px" }}>{p.title}</div>
-                <div style={{ color: "var(--accent)", fontSize: "14px", marginTop: "4px" }}>
-                  EGP {(p.price_cents / 100).toLocaleString(isAr ? "ar-EG" : "en-US")}
-                </div>
-              </th>
-            ))}
+            <th></th>
+            {products.map((p) => {
+              const image = p.images[0] ?? "/images/products/smartphone-hero.svg";
+              return (
+                <th key={p.id}>
+                  <div className="compare-head-media">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={image} alt={p.title} />
+                  </div>
+                  <div className="compare-head-name">{p.title}</div>
+                  <div className="compare-head-price">{formatMoney(p.price_cents, locale, p.currency)}</div>
+                  <form action="/api/cart" method="post" style={{ marginBlockStart: 9 }}>
+                    <input type="hidden" name="action" value="add" />
+                    <input type="hidden" name="product_id" value={p.id} />
+                    <input type="hidden" name="quantity" value={1} />
+                    <button className="btn btn-sm" type="submit" style={{ width: "100%" }} disabled={!p.in_stock}>
+                      {t(locale, "product.addToCart")}
+                    </button>
+                  </form>
+                </th>
+              );
+            })}
           </tr>
         </thead>
         <tbody>
-          {keys.map((k) => (
-            <tr key={k.key}>
-              <td style={{ fontWeight: 600, color: "var(--text-dim)" }}>
-                {isAr ? k.labelAr : k.labelEn}
-              </td>
+          {SPEC_ROWS.map((row) => (
+            <tr key={row.key}>
+              <td style={{ fontWeight: 600, color: "var(--text-muted)" }}>{isAr ? row.labelAr : row.labelEn}</td>
               {products.map((p) => {
-                let rawVal = k.isPrice ? p.price_cents / 100 : p.attrs[k.key];
-                let displayVal = rawVal !== undefined && rawVal !== null ? `${rawVal}${k.unit ? " " + k.unit : ""}` : "—";
-                if (typeof rawVal === "boolean") displayVal = rawVal ? (isAr ? "نعم" : "Yes") : (isAr ? "لا" : "No");
-
+                const raw = p.attrs[row.key];
+                let display: string;
+                if (raw === undefined || raw === null) display = "—";
+                else if (typeof raw === "boolean") display = raw ? (isAr ? "نعم" : "Yes") : isAr ? "لا" : "No";
+                else display = `${raw}${"unit" in row && row.unit ? " " + row.unit : ""}`;
                 return (
-                  <td key={p.id} style={{ textAlign: "center", fontWeight: 500 }}>
-                    {displayVal}
+                  <td key={p.id} style={{ fontWeight: 500 }}>
+                    {display}
                   </td>
                 );
               })}
             </tr>
           ))}
 
-          {/* Statistical Pros / Cons row */}
           <tr>
-            <td style={{ fontWeight: 600, color: "var(--ok)" }}>
-              {isAr ? "أبرز المميزات (محسوبة)" : "Key Strengths"}
-            </td>
+            <td style={{ fontWeight: 600, color: "var(--green)" }}>{t(locale, "product.pros")}</td>
             {products.map((p) => {
               const pc = generateProsCons(p.attrs);
               const pros = isAr ? pc.prosAr : pc.prosEn;
               return (
-                <td key={p.id} style={{ fontSize: "12px", textAlign: "start" }}>
+                <td key={p.id} style={{ fontSize: 12 }}>
                   {pros.length > 0 ? (
-                    <ul style={{ paddingInlineStart: "16px", margin: 0 }}>
+                    <ul style={{ margin: 0, paddingInlineStart: 16 }}>
                       {pros.map((pro, idx) => (
-                        <li key={idx} style={{ color: "var(--ok)", marginBottom: "3px" }}>{pro}</li>
+                        <li key={idx} style={{ color: "var(--green)", marginBlockEnd: 3 }}>
+                          {pro}
+                        </li>
                       ))}
                     </ul>
                   ) : (

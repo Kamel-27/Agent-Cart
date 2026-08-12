@@ -17,9 +17,7 @@ export default async function CheckoutSuccessPage({
 
   return (
     <div className="container">
-      <h1 className="page-title">
-        {isDemo ? t(locale, "checkout.demoTitle") : t(locale, "checkout.paidTitle")}
-      </h1>
+      <h1 className="page-title">{isDemo ? t(locale, "checkout.demoTitle") : t(locale, "checkout.paidTitle")}</h1>
 
       {isDemo && <div className="notice">{t(locale, "checkout.demoBody")}</div>}
 
@@ -28,7 +26,7 @@ export default async function CheckoutSuccessPage({
           <tbody>
             <tr>
               <th scope="row">{t(locale, "checkout.orderNumber")}</th>
-              <td style={{ fontFamily: "ui-monospace, monospace", fontSize: 13 }}>{order.id}</td>
+              <td style={{ fontFamily: "var(--mono)", fontSize: 13 }}>{order.id}</td>
             </tr>
             <tr>
               <th scope="row">{t(locale, "cart.subtotal")}</th>
@@ -40,7 +38,7 @@ export default async function CheckoutSuccessPage({
         <p className="empty-state">{t(locale, "search.noResults")}</p>
       )}
 
-      <p style={{ marginBlockStart: 28 }}>
+      <p style={{ marginBlockStart: 24 }}>
         <Link className="btn" href="/">
           {t(locale, "checkout.backHome")}
         </Link>

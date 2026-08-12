@@ -4,7 +4,7 @@ import { getProductBySlug, getCategoryBySlug, getRelatedProducts } from "@/lib/c
 import { ProductCard } from "@/components/ProductCard";
 import { formatMoney, discountPercent } from "@/lib/money";
 import { getLocale } from "@/lib/locale";
-import { t } from "@/lib/i18n";
+import { t, type Locale } from "@/lib/i18n";
 import { generateProsCons } from "@/lib/pros-cons";
 
 function specLabel(key: string, spec: { unit?: string } | undefined): string {
@@ -20,6 +20,63 @@ function specValue(value: unknown, locale: string): string | null {
   if (value === null || value === undefined) return null;
   if (typeof value === "boolean") return value ? (locale === "ar" ? "نعم" : "Yes") : locale === "ar" ? "لا" : "No";
   return String(value);
+}
+
+/** Real, downloaded press photos are .jpg/.png/.webp; every placeholder asset
+ *  in this repo is a generated .svg. That split is what gates the rich
+ *  photo+prose spec sections below — no fabricated imagery. */
+function isRealPhoto(url: string): boolean {
+  return /\.(jpe?g|png|webp)(\?|$)/i.test(url);
+}
+
+type SpecCategory = "display" | "camera" | "battery" | "performance";
+
+function hasSpecHighlight(category: SpecCategory, attrs: Record<string, unknown>, images: string[]): boolean {
+  if (!images.some(isRealPhoto)) return false;
+  switch (category) {
+    case "display":
+      return Boolean(attrs.screen_in && attrs.display_type && attrs.refresh_hz);
+    case "camera":
+      return Boolean(attrs.rear_camera_mp);
+    case "battery":
+      return Boolean(attrs.battery_mah && attrs.charging_w);
+    case "performance":
+      return Boolean(attrs.chipset && attrs.ram_gb);
+  }
+}
+
+function specHighlightCopy(category: SpecCategory, attrs: Record<string, unknown>, locale: Locale, title: string): { heading: string; body: string } {
+  const isAr = locale === "ar";
+  switch (category) {
+    case "display":
+      return {
+        heading: isAr ? "الشاشة" : "Display",
+        body: isAr
+          ? `شاشة ${attrs.screen_in}" من نوع ${attrs.display_type} بمعدل تحديث ${attrs.refresh_hz}Hz.`
+          : `${title} has a ${attrs.screen_in}" ${attrs.display_type} display with a ${attrs.refresh_hz}Hz refresh rate.`,
+      };
+    case "camera":
+      return {
+        heading: isAr ? "الكاميرا" : "Camera",
+        body: isAr
+          ? `كاميرا خلفية ${attrs.rear_camera_mp} ميجابكسل${attrs.front_camera_mp ? ` وكاميرا أمامية ${attrs.front_camera_mp} ميجابكسل` : ""}.`
+          : `A ${attrs.rear_camera_mp}MP main camera${attrs.front_camera_mp ? ` and a ${attrs.front_camera_mp}MP front camera` : ""}.`,
+      };
+    case "battery":
+      return {
+        heading: isAr ? "البطارية" : "Battery",
+        body: isAr
+          ? `بطارية ${attrs.battery_mah} مللي أمبير مع شحن سلكي ${attrs.charging_w} وات.`
+          : `A ${attrs.battery_mah} mAh battery with ${attrs.charging_w}W wired charging.`,
+      };
+    case "performance":
+      return {
+        heading: isAr ? "الأداء" : "Performance",
+        body: isAr
+          ? `معالج ${attrs.chipset} مع ${attrs.ram_gb} جيجا رام${attrs.storage_gb ? ` و${attrs.storage_gb} جيجا تخزين` : ""}.`
+          : `Powered by ${attrs.chipset} with ${attrs.ram_gb}GB of RAM${attrs.storage_gb ? ` and ${attrs.storage_gb}GB of storage` : ""}.`,
+      };
+  }
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -38,6 +95,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const description = isAr ? product.description_ar : product.description_en;
   const schema = category?.attr_schema ?? [];
   const prosCons = generateProsCons(product.attrs);
+  const rating = product.rating_avg !== null ? Number(product.rating_avg) : null;
 
   const specRows = schema.map((entry) => ({
     key: entry.key,
@@ -45,184 +103,184 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     value: specValue(product.attrs[entry.key], locale),
   }));
 
-  const mainImage = product.images[0] ?? "/images/products/smartphone-hero.svg";
+  const images = product.images.length > 0 ? product.images : ["/images/products/smartphone-hero.svg"];
+  const mainImage = images[0]!;
 
-  // Monthly BNPL estimate
-  const monthlyAmount = Math.round(product.price_cents / 100 / 12);
-  const monthlyText = isAr
-    ? `من ${monthlyAmount.toLocaleString("en-US")} ج.م شهرياً عبر valU وContact`
-    : `From EGP ${monthlyAmount.toLocaleString("en-US")}/mo via valU & Contact`;
+  const highlightCategories: SpecCategory[] = ["display", "camera", "battery", "performance"];
+  const highlights = highlightCategories
+    .filter((cat) => hasSpecHighlight(cat, product.attrs, images))
+    .map((cat, i) => ({
+      category: cat,
+      image: images[Math.min(i, images.length - 1)]!,
+      ...specHighlightCopy(cat, product.attrs, locale, product.title),
+    }));
+
+  const assurance = [
+    ["assurance.auth.title", "assurance.auth.body"],
+    ["assurance.warranty.title", "assurance.warranty.body"],
+    ["assurance.pay.title", "assurance.pay.body"],
+  ] as const;
 
   return (
-    <div className="main-wrapper" style={{ paddingBlockStart: "20px" }}>
+    <div className="main-wrapper" style={{ paddingBlockStart: 20 }}>
       <div className="container">
-        {/* Breadcrumb line */}
-        <div style={{ fontSize: "12px", color: "var(--text-dim)", marginBlockEnd: "16px" }}>
-          <Link href="/" style={{ color: "var(--text-dim)" }}>{t(locale, "nav.home")}</Link>
+        <div className="crumb">
+          <Link href="/">{t(locale, "nav.home")}</Link>
           {" / "}
-          <Link href={`/c/${product.category_slug}`} style={{ color: "var(--text-dim)" }}>
-            {isAr ? product.category_name_ar : product.category_name_en}
-          </Link>
+          <Link href={`/c/${product.category_slug}`}>{isAr ? product.category_name_ar : product.category_name_en}</Link>
           {" / "}
           <span>{product.brand}</span>
-          {" / "}
-          <span style={{ color: "var(--text-main)", fontWeight: 600 }}>{product.title}</span>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "28px", alignItems: "start" }}>
-          {/* Media Container */}
+        <div className="product-layout">
           <div>
-            <div style={{ background: "#ffffff", border: "1px solid var(--border)", borderRadius: "var(--radius-xl)", height: "420px", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px" }}>
+            <div className="product-media">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={mainImage} alt={product.title} style={{ maxWidth: "85%", maxHeight: "85%", objectFit: "contain" }} />
             </div>
+            {images.length > 1 && (
+              <div className="gallery-thumbs">
+                {images.slice(0, 4).map((img, i) => (
+                  <div className={`gallery-thumb${i === 0 ? " is-active" : ""}`} key={img}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={img} alt={`${product.title} ${i + 1}`} />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
-          {/* Product Info & Actions */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-            <div>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: "10px", color: "var(--text-dim)", letterSpacing: "0.12em", textTransform: "uppercase" }}>
-                {product.brand}
-              </div>
-              <h1 style={{ margin: "6px 0 8px", fontSize: "26px", fontWeight: 600, color: "var(--text-main)", lineHeight: 1.25 }}>
-                {product.title}
-              </h1>
-              <div style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "13px", color: "var(--text-muted)", flexWrap: "wrap" }}>
-                <span style={{ color: "var(--star)" }}>★★★★★</span>
-                <span style={{ fontWeight: 600, color: "var(--text-main)" }}>4.9</span>
-                <span>(312 {isAr ? "تقييم" : "reviews"})</span>
-                <span style={{ color: "#dadee4" }}>|</span>
-                <span style={{ color: "var(--ok)", fontWeight: 600 }}>{isAr ? "متوفر بالكرتونة" : "In Stock"}</span>
-              </div>
-            </div>
+          <div>
+            {product.brand && <span className="phone-brand">{product.brand}</span>}
+            <h1 className="product-title">{product.title}</h1>
 
-            <div style={{ display: "flex", alignItems: "baseline", gap: "12px", flexWrap: "wrap" }}>
-              <span style={{ fontSize: "30px", fontWeight: 700, color: "var(--text-main)", fontVariantNumeric: "tabular-nums" }}>
-                {formatMoney(product.price_cents, locale, product.currency)}
-              </span>
+            {rating !== null && product.rating_count > 0 && (
+              <div className="rating-row" style={{ marginBlockEnd: 10 }}>
+                <span className="rating-stars">★★★★★</span>
+                <span className="rating-score">{rating.toFixed(1)}</span>
+                <span>
+                  ({product.rating_count} {t(locale, "product.reviews")})
+                </span>
+                <span style={{ color: "var(--border)" }}>|</span>
+                <span className={`stock-badge${product.in_stock ? "" : " is-out"}`}>
+                  {product.in_stock ? t(locale, "product.inStock") : t(locale, "product.outOfStock")}
+                </span>
+              </div>
+            )}
+            {(rating === null || product.rating_count === 0) && (
+              <div style={{ marginBlockEnd: 10 }}>
+                <span className={`stock-badge${product.in_stock ? "" : " is-out"}`}>
+                  {product.in_stock ? t(locale, "product.inStock") : t(locale, "product.outOfStock")}
+                </span>
+              </div>
+            )}
+
+            <div className="phone-price-row" style={{ marginBlockEnd: 4 }}>
+              <span className="product-price">{formatMoney(product.price_cents, locale, product.currency)}</span>
               {discount !== null && product.regular_price_cents !== null && (
                 <>
-                  <span style={{ fontSize: "15px", color: "#98a1ae", textDecoration: "line-through" }}>
+                  <span className="phone-price-was" style={{ fontSize: 15 }}>
                     {formatMoney(product.regular_price_cents, locale, product.currency)}
                   </span>
-                  <span style={{ background: "var(--sale-soft)", color: "var(--sale)", fontSize: "12px", fontWeight: 600, borderRadius: "6px", padding: "4px 9px" }}>
+                  <span className="discount-badge" style={{ position: "static" }}>
                     −{discount}%
                   </span>
                 </>
               )}
             </div>
 
-            {/* Installments Box */}
-            <div style={{ border: "1px solid var(--primary-border)", background: "var(--primary-soft)", borderRadius: "var(--radius-lg)", padding: "14px 16px" }}>
-              <div style={{ fontSize: "13px", fontWeight: 600, color: "#123f7d" }}>{monthlyText}</div>
-              <div style={{ fontSize: "12px", color: "#4c6b96", marginTop: "4px", lineHeight: "1.5" }}>
-                {isAr ? "تقسيط عبر valU وContact والبنوك حتى 36 شهر بموافقة فورية بالرقم القومي." : "Valu, Contact, and bank instalments up to 36 months with national ID approval."}
-              </div>
-            </div>
+            {description && <p className="product-desc">{description}</p>}
 
-            {description && <p style={{ color: "var(--text-muted)", fontSize: "14px", lineHeight: "1.6", margin: 0 }}>{description}</p>}
-
-            {/* Shipping & Delivery Info Box */}
-            <div style={{ border: "1px solid var(--border)", background: "#ffffff", borderRadius: "var(--radius-lg)", padding: "14px 16px", display: "flex", flexDirection: "column", gap: "8px" }}>
-              <div style={{ fontSize: "13px", color: "var(--ok)", fontWeight: 600 }}>
-                ⚡ {isAr ? "التوصيل غداً في القاهرة والجيزة" : "Delivered tomorrow in Cairo & Giza"}
-              </div>
-              <div style={{ fontSize: "12px", color: "var(--text-muted)", lineHeight: "1.5" }}>
-                {isAr ? "استبدل هاتفك القديم واخصم قيمته مباشرة عند الشراء في الفرع أو أثناء التسليم." : "Trade in your old phone and deduct its value directly upon purchase."}
-              </div>
-            </div>
-
-            {/* CTAs */}
-            <div style={{ display: "flex", gap: "12px", marginBlockStart: "8px", flexWrap: "wrap" }}>
-              <form action="/api/cart" method="post" style={{ flex: 1, minWidth: "170px", margin: 0 }}>
+            <div style={{ display: "flex", gap: 12, marginBlock: 8, flexWrap: "wrap" }}>
+              <form action="/api/cart" method="post" style={{ display: "flex", gap: 10, alignItems: "center", flex: "1 1 auto", minWidth: 220 }}>
                 <input type="hidden" name="action" value="add" />
                 <input type="hidden" name="product_id" value={product.id} />
                 <input type="hidden" name="redirect_to" value={`/p/${product.slug}`} />
-                <button
-                  type="submit"
-                  disabled={!product.in_stock}
-                  style={{
-                    width: "100%",
-                    border: "none",
-                    background: "var(--primary)",
-                    color: "#ffffff",
-                    borderRadius: "11px",
-                    padding: "16px 22px",
-                    fontSize: "15px",
-                    fontWeight: 600,
-                    cursor: "pointer",
-                  }}
-                >
-                  🛒 {isAr ? "أضف إلى السلة" : "Add to Cart"}
+                <input type="number" name="quantity" defaultValue={1} min={1} max={99} style={{ inlineSize: 70, padding: "12px 10px", border: "1px solid var(--border)", borderRadius: 9, fontSize: 13 }} />
+                <button className="btn-primary" style={{ flex: 1 }} type="submit" disabled={!product.in_stock}>
+                  {product.in_stock ? t(locale, "product.addToCart") : t(locale, "product.outOfStock")}
                 </button>
               </form>
 
-              <Link
-                href={`/compare?ids=${product.id}`}
-                style={{
-                  border: "1px solid var(--text-main)",
-                  background: "var(--text-main)",
-                  color: "#ffffff",
-                  borderRadius: "11px",
-                  padding: "16px 22px",
-                  fontSize: "15px",
-                  fontWeight: 600,
-                  textDecoration: "none",
-                  textAlign: "center",
-                  display: "inline-block",
-                }}
-              >
-                ⚖️ {isAr ? "مقارنة الهاتف" : "Compare Specs"}
+              <Link href={`/compare?ids=${product.id}`} className="btn-outline-white" style={{ color: "var(--ink)", borderColor: "var(--border)" }}>
+                ⚖️ {t(locale, "product.compare")}
               </Link>
             </div>
 
-            {/* Pros & Cons Engine Section */}
-            {(prosCons.prosEn.length > 0 || prosCons.consEn.length > 0) && (
-              <div style={{ background: "#ffffff", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", padding: "16px", marginBlockStart: "16px" }}>
-                <h3 style={{ margin: "0 0 12px", fontSize: "15px", fontWeight: 600, color: "var(--text-main)" }}>
-                  {isAr ? "مميزات وعيوب الهاتف (محسوبة احصائياً)" : "Statistically Calculated Pros & Cons"}
-                </h3>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                  <div>
-                    <h4 style={{ color: "var(--ok)", margin: "0 0 6px", fontSize: "13px" }}>{isAr ? "المميزات" : "Pros"}</h4>
-                    <ul style={{ margin: 0, paddingInlineStart: "16px", fontSize: "13px" }}>
-                      {(isAr ? prosCons.prosAr : prosCons.prosEn).map((pro, idx) => (
-                        <li key={idx} style={{ color: "var(--ok)", marginBottom: "4px" }}>{pro}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 style={{ color: "var(--sale)", margin: "0 0 6px", fontSize: "13px" }}>{isAr ? "العيوب" : "Cons"}</h4>
-                    <ul style={{ margin: 0, paddingInlineStart: "16px", fontSize: "13px" }}>
-                      {(isAr ? prosCons.consAr : prosCons.consEn).map((con, idx) => (
-                        <li key={idx} style={{ color: "var(--sale)", marginBottom: "4px" }}>{con}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Specs Table */}
-            <h2 className="section-title-main" style={{ marginBlockStart: "32px" }}>
-              {t(locale, "product.specs")}
-            </h2>
-            <div style={{ background: "#ffffff", border: "1px solid var(--border)", borderRadius: "var(--radius-lg)", overflow: "hidden" }}>
-              {specRows.map((row) => (
-                <div key={row.key} style={{ display: "flex", padding: "12px 16px", borderBottom: "1px solid var(--border)" }}>
-                  <div style={{ width: "180px", minWidth: "120px", fontSize: "13px", color: "var(--text-muted)" }}>{row.label}</div>
-                  <div style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-main)" }}>{row.value ?? "—"}</div>
+            <div className="assurance-grid">
+              {assurance.map(([titleKey, bodyKey]) => (
+                <div className="assurance-card" key={titleKey}>
+                  <div className="assurance-card-title">{t(locale, titleKey)}</div>
+                  <div className="assurance-card-body">{t(locale, bodyKey)}</div>
                 </div>
               ))}
             </div>
+
+            {(prosCons.prosEn.length > 0 || prosCons.consEn.length > 0) && (
+              <div className="pros-cons-card">
+                <h3>{isAr ? "مميزات وعيوب محسوبة من المواصفات" : "Pros & cons, computed from the spec sheet"}</h3>
+                <div>
+                  <h4 style={{ color: "var(--green)" }}>{t(locale, "product.pros")}</h4>
+                  <ul>
+                    {(isAr ? prosCons.prosAr : prosCons.prosEn).map((pro, idx) => (
+                      <li key={idx} style={{ color: "var(--green)" }}>
+                        {pro}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 style={{ color: "var(--sale)" }}>{t(locale, "product.cons")}</h4>
+                  <ul>
+                    {(isAr ? prosCons.consAr : prosCons.consEn).map((con, idx) => (
+                      <li key={idx} style={{ color: "var(--sale)" }}>
+                        {con}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Similar Phones */}
+        {highlights.length > 0 && (
+          <section style={{ marginBlockStart: 40 }}>
+            {highlights.map((h) => (
+              <div className="spec-highlight" key={h.category}>
+                <div className="spec-highlight-media">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={h.image} alt={h.heading} />
+                </div>
+                <div>
+                  <h3 className="spec-highlight-title">{h.heading}</h3>
+                  <p className="spec-highlight-body">{h.body}</p>
+                </div>
+              </div>
+            ))}
+          </section>
+        )}
+
+        <section style={{ marginBlockStart: 40 }}>
+          <h2 className="section-title-main" style={{ marginBlockEnd: 14 }}>
+            {t(locale, "product.specs")}
+          </h2>
+          <table className="spec-table">
+            <tbody>
+              {specRows.map((row) => (
+                <tr key={row.key}>
+                  <th scope="row">{row.label}</th>
+                  <td className={row.value === null ? "spec-unknown" : undefined}>{row.value ?? t(locale, "product.unknown")}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
         {related.length > 0 && (
-          <section style={{ marginBlockStart: "48px" }}>
-            <h2 className="section-title-main" style={{ marginBlockEnd: "16px" }}>
-              {isAr ? "هواتف مشابهة قد تعجبك" : "Similar Smartphones"}
+          <section style={{ marginBlockStart: 40 }}>
+            <h2 className="section-title-main" style={{ marginBlockEnd: 14 }}>
+              {t(locale, "product.similar")}
             </h2>
             <div className="phone-grid">
               {related.map((item) => (
